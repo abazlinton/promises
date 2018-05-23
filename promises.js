@@ -1,27 +1,5 @@
 
 
-// const makeAPromise = () => {
-//   return new Promise((resolve) => {
-//     resolve("yo")
-//   })
-// }
-
-
-// const in1SecInvokeCallback = (callback) => {
-//   setTimeout(callback, 1000);
-// }
-
-// // in1SecInvokeCallback(() => {
-// //   console.log('first callback');
-// //   in1SecInvokeCallback(() => {
-// //     console.log('second callback');
-// //     in1SecInvokeCallback(() => {
-// //       console.log('third callback');
-// //     })
-// //   })
-// // })
-
-// makeAPromise().then(console.log)
 
 const alwaysResolves = () => {
   return new Promise((resolve) => {
@@ -76,5 +54,20 @@ const resolvesEventually = () => {
 }
 
 resolvesEventually().then(sometimesResolves).then(success).catch(fail)
+
+
+// const in1SecInvokeCallback = (callback) => {
+//   setTimeout(callback, 1000);
+// }
+
+// // in1SecInvokeCallback(() => {
+// //   console.log('first callback');
+// //   in1SecInvokeCallback(() => {
+// //     console.log('second callback');
+// //     in1SecInvokeCallback(() => {
+// //       console.log('third callback');
+// //     })
+// //   })
+// // })
 
 
